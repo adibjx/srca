@@ -125,14 +125,70 @@
         <span class="eyebrow center">Setores em que atuamos</span>
         <h2>Cada setor tem<br />particularidades. Conhecemos as suas.</h2>
       </div>
-      <div class="sectors-grid">
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-briefcase"></use></svg></div><h3>Agronegócio</h3><p>A tributação no agronegócio envolve imunidades constitucionais, regimes especiais de ICMS, transferências de propriedade rural e estruturas de sucessão com impacto patrimonial significativo, questões que exigem leitura jurídica específica.</p></div>
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-heart"></use></svg></div><h3>Saúde</h3><p>Clínicas, laboratórios e prestadores de serviços de saúde operam com regras próprias: do enquadramento tributário das atividades médicas à tributação sobre distribuição de resultados entre sócios.</p></div>
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-building"></use></svg></div><h3>Construção Civil</h3><p>O setor da construção lida com um dos ambientes tributários mais complexos: regime por empreendimento, ICMS sobre materiais, ISS por município e regimes especiais de SPE.</p></div>
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-truck"></use></svg></div><h3>Transporte e Logística</h3><p>Empresas de transporte convivem com tributação estadual sensível no ICMS interestadual, além de questões sobre contratos com motoristas e planejamento de frota, recorrentes no Triângulo Mineiro.</p></div>
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-tools"></use></svg></div><h3>Serviços</h3><p>Empresas de serviços lidam com ISS municipal, enquadramento de atividades e tributação sobre a remuneração dos sócios. O regime tributário adequado depende do perfil da atividade e da composição societária.</p></div>
-        <div class="sector-card"><div class="icon-frame"><svg><use href="#icon-package"></use></svg></div><h3>Indústria e Comércio</h3><p>Operações industriais e comerciais envolvem ICMS, IPI e créditos de PIS/COFINS com regras que variam por produto e cadeia de fornecimento. A complexidade tributária nesse segmento é alta e a margem para estruturação também.</p></div>
+      <div class="sectors-carousel">
+        <button class="sectors-nav sectors-prev" aria-label="Anterior" disabled><svg class="flip-x"><use href="#icon-arrow"></use></svg></button>
+        <div class="sectors-viewport">
+          <div class="sectors-track">
+
+            <div class="sector-card">
+              <div class="sector-card-img"><img src="assets/setores/agronegocio.png" alt="" /></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-briefcase"></use></svg></div>
+                <h3>Agronegócio</h3>
+                <p>A tributação no agronegócio envolve imunidades constitucionais, regimes especiais de ICMS, transferências de propriedade rural e estruturas de sucessão com impacto patrimonial significativo, questões que exigem leitura jurídica específica.</p>
+              </div>
+            </div>
+
+            <div class="sector-card">
+              <div class="sector-card-img"><img src="assets/setores/saude.png" alt="" /></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-heart"></use></svg></div>
+                <h3>Saúde</h3>
+                <p>Clínicas, laboratórios e prestadores de serviços de saúde operam com regras próprias: do enquadramento tributário das atividades médicas à tributação sobre distribuição de resultados entre sócios.</p>
+              </div>
+            </div>
+
+            <div class="sector-card">
+              <div class="sector-card-img"><img src="assets/setores/construcao.png" alt="" /></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-building"></use></svg></div>
+                <h3>Construção Civil</h3>
+                <p>O setor da construção lida com um dos ambientes tributários mais complexos: regime por empreendimento, ICMS sobre materiais, ISS por município e regimes especiais de SPE.</p>
+              </div>
+            </div>
+
+            <div class="sector-card">
+              <div class="sector-card-img"><img src="assets/setores/transporte.png" alt="" /></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-truck"></use></svg></div>
+                <h3>Transporte e Logística</h3>
+                <p>Empresas de transporte convivem com tributação estadual sensível no ICMS interestadual, além de questões sobre contratos com motoristas e planejamento de frota, recorrentes no Triângulo Mineiro.</p>
+              </div>
+            </div>
+
+            <div class="sector-card">
+              <div class="sector-card-img sector-card-img--placeholder"></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-tools"></use></svg></div>
+                <h3>Serviços</h3>
+                <p>Empresas de serviços lidam com ISS municipal, enquadramento de atividades e tributação sobre a remuneração dos sócios. O regime tributário adequado depende do perfil da atividade e da composição societária.</p>
+              </div>
+            </div>
+
+            <div class="sector-card">
+              <div class="sector-card-img sector-card-img--placeholder"></div>
+              <div class="sector-card-body">
+                <div class="icon-frame"><svg><use href="#icon-package"></use></svg></div>
+                <h3>Indústria e Comércio</h3>
+                <p>Operações industriais e comerciais envolvem ICMS, IPI e créditos de PIS/COFINS com regras que variam por produto e cadeia de fornecimento. A complexidade tributária nesse segmento é alta e a margem para estruturação também.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <button class="sectors-nav sectors-next" aria-label="Próximo"><svg><use href="#icon-arrow"></use></svg></button>
       </div>
+      <div class="sectors-dots"></div>
       <p class="sectors-note">O escritório atende empresas de outros setores além dos listados acima. A estrutura tributária de cada negócio tem suas particularidades: o ponto de partida é sempre entender a atividade específica da empresa.</p>
     </div>
   </section>
@@ -298,6 +354,64 @@
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFvDCiNFAOsy3k3EDhJZFO2FtbJubArZoORJ7kdQ_xL1V38o6Dsmv8C2FCa7HWQCZNJg/exec';
 
   const SUCCESS_HTML = '<div style="display:flex;justify-content:center;align-items:center;padding:64px 24px;"><div class="form-card" style="max-width:560px;width:100%;"><div class="form-success"><div class="check-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Mensagem recebida.</h3><p>Um dos sócios do escritório entrará em contato em até 48 horas úteis pelo e-mail ou telefone informado.</p><p style="margin-top:24px;font-size:13px;color:var(--color-gray-500)">Esta comunicação tem caráter informativo e não configura consultoria jurídica formal.</p></div></div></div>';
+
+  // ── Carrossel de setores ──
+  (function () {
+    const viewport = document.querySelector('.sectors-viewport');
+    const track    = document.querySelector('.sectors-track');
+    const cards    = Array.from(track.querySelectorAll('.sector-card'));
+    const prevBtn  = document.querySelector('.sectors-prev');
+    const nextBtn  = document.querySelector('.sectors-next');
+    const dotsWrap = document.querySelector('.sectors-dots');
+
+    function perView() {
+      if (window.innerWidth > 1100) return 3;
+      if (window.innerWidth > 720)  return 2;
+      return 1;
+    }
+    function maxIdx() { return Math.max(0, cards.length - perView()); }
+
+    let current = 0;
+
+    function buildDots() {
+      dotsWrap.innerHTML = '';
+      for (let i = 0; i <= maxIdx(); i++) {
+        const btn = document.createElement('button');
+        btn.className = 'sector-dot' + (i === current ? ' active' : '');
+        btn.setAttribute('aria-label', 'Setor ' + (i + 1));
+        btn.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(btn);
+      }
+    }
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(idx, maxIdx()));
+      const cardW = cards[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${current * (cardW + 16)}px)`;
+      dotsWrap.querySelectorAll('.sector-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current >= maxIdx();
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    let startX = 0;
+    viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+      const dx = startX - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 48) goTo(current + (dx > 0 ? 1 : -1));
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => { buildDots(); goTo(Math.min(current, maxIdx())); }, 150);
+    });
+
+    buildDots();
+    goTo(0);
+  })();
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
