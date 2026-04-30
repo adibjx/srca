@@ -440,78 +440,6 @@ section { padding: 120px 0; }
 }
 .pull-quote .accent { color: var(--color-accent-dark); }
 
-/* ============ EDITORIAL CONTRAST ============ */
-.contrast-block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid var(--color-gray-200);
-  background: transparent;
-  position: relative;
-  margin-top: 56px;
-}
-.contrast-block::before {
-  content: 'vs';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--color-surface);
-  padding: 8px 14px;
-  font-family: var(--font-heading);
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-accent-dark);
-  border: 1px solid var(--color-gray-200);
-  border-radius: 0;
-  z-index: 2;
-}
-.contrast-col {
-  padding: 44px 44px;
-}
-.contrast-col + .contrast-col {
-  border-left: 1px solid var(--color-gray-200);
-}
-.contrast-col .role {
-  font-family: var(--font-ui);
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--color-gray-500);
-  margin-bottom: 14px;
-  display: block;
-}
-.contrast-col h3 {
-  font-size: 26px;
-  margin-bottom: 18px;
-}
-.contrast-col.advogado h3 { color: var(--color-accent-dark); }
-.contrast-col p {
-  font-size: 16px;
-  line-height: 1.65;
-  color: var(--color-gray-700);
-}
-.contrast-col ul {
-  list-style: none;
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.contrast-col li {
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  font-size: 15px;
-  line-height: 1.5;
-  color: var(--color-gray-700);
-}
-.contrast-col li svg {
-  flex-shrink: 0;
-  margin-top: 4px;
-  color: var(--color-accent);
-  width: 14px;
-  height: 14px;
-}
 
 /* ============ PROCESS ============ */
 .process-grid {
@@ -1060,11 +988,6 @@ textarea.form-control { min-height: 110px; resize: vertical; }
   .hero-cta-row { flex-direction: column; align-items: stretch; gap: 12px; }
   .hero-cta-row .btn { justify-content: center; }
   .hero-side { max-width: 100%; }
-
-  /* Contrast */
-  .contrast-block { grid-template-columns: 1fr; }
-  .contrast-col + .contrast-col { border-left: 0; border-top: 1px solid var(--color-gray-200); }
-  .contrast-block::before { display: none; }
 
   /* Process */
   .process-grid { grid-template-columns: 1fr; }
