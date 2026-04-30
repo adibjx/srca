@@ -1134,8 +1134,6 @@ textarea.form-control { min-height: 110px; resize: vertical; }
   section { padding: 60px 0; }
   .container, .container-narrow { padding: 0 16px; }
 
-  /* Header: esconde o botão, logo fica sozinha */
-  .header-right .btn { display: none; }
   .brandmark-logo { height: 34px; }
 
   /* Hero */
