@@ -324,41 +324,6 @@ em.serif-italic {
   background: rgba(255,255,255,0.25);
 }
 
-/* ============ TRUSTBAR ============ */
-.trustbar {
-  background: #1F1D1A;
-  color: #fff;
-  padding: 32px 0;
-  border-bottom: 1px solid rgba(201,168,76,0.15);
-}
-.trustbar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  align-items: center;
-}
-.trustbar-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.trustbar-item svg { color: var(--color-accent); flex-shrink: 0; }
-.trustbar-item svg { width: 16px; height: 16px; }
-.trustbar-item .num {
-  font-family: var(--font-heading);
-  font-size: 27px;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-.trustbar-item .desc {
-  font-family: var(--font-ui);
-  font-size: 12px;
-  color: rgba(255,255,255,0.65);
-  margin-top: 6px;
-  line-height: 1.4;
-  letter-spacing: 0.02em;
-}
 
 /* ============ SECTIONS ============ */
 section { padding: 120px 0; }
@@ -1076,7 +1041,6 @@ textarea.form-control { min-height: 110px; resize: vertical; }
   .sector-card { flex: 0 0 calc((100% - 16px) / 2); }
   .sectors-note { font-size: 13px; }
   .partners-grid { grid-template-columns: repeat(2, 1fr); }
-  .trustbar-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 48px; }
 }
 @media (max-width: 720px) {
@@ -1106,10 +1070,7 @@ textarea.form-control { min-height: 110px; resize: vertical; }
   /* Section head */
   .section-head { margin-bottom: 48px; }
 
-  /* Trustbar */
-  .trustbar { padding: 24px 0; }
-
-  /* Sectors / Partners */
+/* Sectors / Partners */
   .sector-card { flex: 0 0 100%; }
   .partners-grid { grid-template-columns: 1fr; }
 
@@ -1150,12 +1111,7 @@ textarea.form-control { min-height: 110px; resize: vertical; }
   /* Section head */
   .section-head { margin-bottom: 36px; }
 
-  /* Trustbar — uma coluna em telas muito pequenas */
-  .trustbar-grid { grid-template-columns: 1fr; gap: 18px; }
-  .trustbar-item { gap: 12px; }
-  .trustbar-item .num { font-size: 22px; }
-
-  /* FAQ */
+/* FAQ */
   .faq-trigger { font-size: 16px; padding: 22px 0; gap: 10px; }
   .faq-body p { padding-left: 30px; padding-bottom: 20px; }
 
