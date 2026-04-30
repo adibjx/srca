@@ -9,6 +9,15 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-NXFD7QHC');</script>
   <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NGKR33Z7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GT-NGKR33Z7');
+  </script>
+  <!-- End Google tag -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SRCA Planejamento Tributário para empresas do Triângulo Mineiro</title>
@@ -690,7 +699,7 @@
     // Cole aqui a URL gerada ao publicar o Apps Script como App da Web
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFvDCiNFAOsy3k3EDhJZFO2FtbJubArZoORJ7kdQ_xL1V38o6Dsmv8C2FCa7HWQCZNJg/exec';
 
-    const SUCCESS_HTML = '<div style="display:flex;justify-content:center;align-items:center;padding:64px 24px;"><div class="form-card" style="max-width:560px;width:100%;"><div class="form-success"><div class="check-circle"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div><h3>Mensagem recebida.</h3><p>Um dos sócios do escritório entrará em contato em até 48 horas úteis pelo e-mail ou telefone informado.</p><p style="margin-top:24px;font-size:13px;color:var(--color-gray-500)">Esta comunicação tem caráter informativo e não configura consultoria jurídica formal.</p></div></div></div>';
+    const SUCCESS_HTML = '<div style="width:100%;box-sizing:border-box;display:flex;justify-content:center;align-items:center;padding:80px 24px;"><div style="box-sizing:border-box;max-width:520px;width:100%;background:var(--color-surface);color:var(--color-secondary);padding:48px 40px;border-top:3px solid var(--color-accent);box-shadow:0 32px 70px rgba(6,29,42,0.26);text-align:center;"><div style="width:64px;height:64px;border:1px solid var(--color-accent);border-radius:999px;margin:0 auto 24px;display:flex;align-items:center;justify-content:center;color:var(--color-accent);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg></div><h3 style="font-family:var(--font-heading);font-size:26px;font-weight:700;color:var(--color-primary);margin-bottom:12px;">Mensagem recebida.</h3><p style="font-family:var(--font-body);font-size:16px;line-height:1.65;color:var(--color-secondary);max-width:380px;margin:0 auto;">Um dos sócios do escritório entrará em contato em até 48 horas úteis pelo e-mail ou telefone informado.</p><p style="margin-top:24px;font-size:13px;font-family:var(--font-ui);color:var(--color-gray-500);">Esta comunicação tem caráter informativo e não configura consultoria jurídica formal.</p></div></div>';
 
     // ── Carrossel de setores ──
     (function () {
@@ -796,6 +805,12 @@
         // para não bloquear o lead caso haja falha de rede pontual.
       } finally {
         formShell.innerHTML = SUCCESS_HTML;
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: 'form_lead_submit',
+          lead_setor: fields.setor,
+          lead_faturamento: fields.faturamento
+        });
       }
     });
   </script>
