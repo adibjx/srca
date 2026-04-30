@@ -7,8 +7,6 @@
    revival used by AmLaw firms; Söhne-style replaced with GT Sectra fallback via Source Serif → instead
    we use Cormorant for display and Söhne-substitute via 'Söhne'/system. Body is set in 'Spectral' for
    editorial calm, with 'Söhne'-style sans 'Söhne' falling back to Inter Tight when offline. */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Spectral:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap');
-
 :root {
   /* ===== BRAND COLORS ===== */
   /* Primary — azul-marinho (autoridade, sobriedade) */
