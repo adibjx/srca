@@ -3,17 +3,20 @@
 
 <head>
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NXFD7QHC');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NXFD7QHC');</script>
   <!-- End Google Tag Manager -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=GT-NGKR33Z7"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'GT-NGKR33Z7');
   </script>
@@ -44,7 +47,8 @@
   <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="assets/imagery/home-hero-editorial.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/imagery/bg-desk.jpg" media="(min-width: 721px)" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/imagery/bg-mobile.jpg" media="(max-width: 720px)" fetchpriority="high" />
   <link
     href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Spectral:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
@@ -54,8 +58,8 @@
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXFD7QHC"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXFD7QHC" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
     <symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -132,7 +136,7 @@
   <header class="header">
     <div class="container">
       <a href="#top" class="brandmark">
-        <img src="assets/logo/srca-logo-cropped.png"
+        <img src="assets/imagery/logo/srca-logo-cropped.png"
           alt="Squiapati, Romano, Chagas &amp; Afonso Neto Advocacia Tributária" class="brandmark-logo" width="377"
           height="124" decoding="async" />
       </a>
@@ -149,17 +153,21 @@
 
   <main>
     <section id="top" class="hero" data-screen-label="01 Hero">
-      <div class="hero-bg"><img src="assets/imagery/home-hero-editorial.png" alt="" width="1672" height="941"
-          fetchpriority="high" decoding="async" /></div>
+      <div class="hero-bg">
+        <picture>
+          <source srcset="assets/imagery/bg-mobile.jpg" media="(max-width: 720px)" />
+          <img src="assets/imagery/bg-desk.jpg" alt="" width="1672" height="941" fetchpriority="high"
+            decoding="async" />
+        </picture>
+      </div>
       <div class="hero-content">
         <div class="container">
           <div class="hero-grid">
             <div>
-              <span class="eyebrow light">Advocacia Tributária · Triângulo Mineiro</span>
               <h1 class="hero-headline">
-                <span class="line">Inteligência tributária</span>
-                <span class="line accent">para seu negócio</span>
-                <span class="line accent">e patrimônio.</span>
+                <span class="line">INTELIGÊNCIA TRIBUTÁRIA</span>
+                <span class="line accent">PARA SEU NEGÓCIO</span>
+                <span class="line accent">E PATRIMÔNIO.</span>
               </h1>
               <p class="hero-tagline">O SRCA é um escritório exclusivamente tributário. Analisamos a estrutura da
                 empresa, o regime de tributação, a distribuição de resultados e a proteção patrimonial dos sócios. O
@@ -173,12 +181,6 @@
                 <a href="#como-funciona" class="btn btn-ghost-light btn-lg">Conheça nossa atuação</a>
               </div>
             </div>
-            <aside class="hero-side">
-              <span class="label">Especialização exclusiva</span>
-              <p class="stat-desc">Tributário não é uma das áreas do escritório. É a única. Toda a equipe e toda a
-                estrutura dedicadas a uma única disciplina do direito.</p>
-              <p class="source">Planejamento · Holding · Contencioso</p>
-            </aside>
           </div>
         </div>
       </div>
@@ -289,7 +291,8 @@
             </div>
             <div class="timeline-body">
               <h3>Entendimento do negócio</h3>
-              <p>Antes de qualquer análise técnica, o escritório precisa entender como a empresa funciona: atividade, estrutura societária, operações relevantes e objetivos dos sócios.</p>
+              <p>Antes de qualquer análise técnica, o escritório precisa entender como a empresa funciona: atividade,
+                estrutura societária, operações relevantes e objetivos dos sócios.</p>
               <span class="duration">Conversa inicial</span>
             </div>
           </li>
@@ -300,7 +303,8 @@
             </div>
             <div class="timeline-body">
               <h3>Análise tributária</h3>
-              <p>Com as informações em mãos, realizamos uma leitura estruturada da situação fiscal: regime de tributação, obrigações, contratos e operações com impacto tributário.</p>
+              <p>Com as informações em mãos, realizamos uma leitura estruturada da situação fiscal: regime de
+                tributação, obrigações, contratos e operações com impacto tributário.</p>
               <span class="duration">SRCA · análise técnica</span>
             </div>
           </li>
@@ -311,7 +315,8 @@
             </div>
             <div class="timeline-body">
               <h3>Orientação e estruturação</h3>
-              <p>Apresentamos as conclusões de forma clara e discutimos as alternativas disponíveis dentro da legislação. A decisão de cada encaminhamento é sempre do empresário.</p>
+              <p>Apresentamos as conclusões de forma clara e discutimos as alternativas disponíveis dentro da
+                legislação. A decisão de cada encaminhamento é sempre do empresário.</p>
               <span class="duration">Reunião de devolutiva</span>
             </div>
           </li>
@@ -322,7 +327,8 @@
             </div>
             <div class="timeline-body">
               <h3>Acompanhamento</h3>
-              <p>O escritório acompanha a implementação das estruturas, monitora mudanças na legislação e revisita as análises quando o negócio mudar.</p>
+              <p>O escritório acompanha a implementação das estruturas, monitora mudanças na legislação e revisita as
+                análises quando o negócio mudar.</p>
               <span class="duration">Relação contínua</span>
             </div>
           </li>
@@ -614,7 +620,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="brandmark"><img src="assets/logo/srca-logo-cropped.png"
+          <div class="brandmark"><img src="assets/imagery/logo/srca-logo-cropped.png"
               alt="Squiapati, Romano, Chagas &amp; Afonso Neto Advocacia Tributária" class="brandmark-logo" width="377"
               height="124" loading="lazy" decoding="async" /></div>
           <p>Squiapati, Romano, Chagas & Afonso Neto Advocacia Tributária.<br />Advocacia exclusivamente tributária.
