@@ -1,0 +1,184 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-04-30 10:00:00",
+  "containerVersion": {
+    "path": "accounts/0/containers/0/versions/0",
+    "accountId": "0",
+    "containerId": "0",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/0/containers/0",
+      "accountId": "0",
+      "containerId": "0",
+      "name": "SRCA Landing",
+      "publicId": "GTM-NXFD7QHC",
+      "usageContext": ["WEB"],
+      "fingerprint": "0",
+      "tagManagerUrl": "https://tagmanager.google.com/"
+    },
+    "builtInVariable": [
+      { "accountId": "0", "containerId": "0", "type": "PAGE_URL",      "name": "Page URL" },
+      { "accountId": "0", "containerId": "0", "type": "PAGE_HOSTNAME", "name": "Page Hostname" },
+      { "accountId": "0", "containerId": "0", "type": "PAGE_PATH",     "name": "Page Path" },
+      { "accountId": "0", "containerId": "0", "type": "REFERRER",      "name": "Referrer" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_ELEMENT", "name": "Click Element" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_CLASSES", "name": "Click Classes" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_ID",      "name": "Click ID" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_TARGET",  "name": "Click Target" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_URL",     "name": "Click URL" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_TEXT",    "name": "Click Text" },
+      { "accountId": "0", "containerId": "0", "type": "CONTAINER_ID",  "name": "Container ID" }
+    ],
+    "variable": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "1",
+        "name": "DLV - lead_setor",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER",  "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN",  "key": "setDefaultValue",  "value": "false" },
+          { "type": "TEMPLATE", "key": "name",             "value": "lead_setor" }
+        ],
+        "fingerprint": "0",
+        "formatValue": {}
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "2",
+        "name": "DLV - lead_faturamento",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER",  "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN",  "key": "setDefaultValue",  "value": "false" },
+          { "type": "TEMPLATE", "key": "name",             "value": "lead_faturamento" }
+        ],
+        "fingerprint": "0",
+        "formatValue": {}
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "1",
+        "name": "Todas as Páginas",
+        "type": "PAGEVIEW",
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "2",
+        "name": "Evento – Lead Formulário",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "form_lead_submit" }
+            ]
+          }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "3",
+        "name": "Clique – WhatsApp",
+        "type": "LINK_CLICK",
+        "autoEventFilter": [
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{Click URL}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "wa.me/5534997391342" }
+            ]
+          }
+        ],
+        "waitForTags": { "type": "BOOLEAN", "value": "true" },
+        "checkValidation": { "type": "BOOLEAN", "value": "true" },
+        "waitForTagsTimeout": { "type": "TEMPLATE", "value": "2000" },
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "4",
+        "name": "Clique – CTA Fale com o Escritório",
+        "type": "CLICK",
+        "autoEventFilter": [
+          {
+            "type": "CONTAINS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{Click Classes}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "js-scroll-form" }
+            ]
+          }
+        ],
+        "fingerprint": "0"
+      }
+    ],
+    "tag": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "1",
+        "name": "Conversion Linker – Todas as Páginas",
+        "type": "cl",
+        "parameter": [
+          { "type": "BOOLEAN",  "key": "enableCrossDomainLinking",   "value": "false" },
+          { "type": "BOOLEAN",  "key": "decorate_forms",             "value": "true" },
+          { "type": "TEMPLATE", "key": "crossDomainAutoLinkDomains", "value": "" }
+        ],
+        "firingTriggerId": ["1"],
+        "tagFiringOption": "ONCE_PER_LOAD",
+        "fingerprint": "0",
+        "priority": { "type": "INTEGER", "value": "10" }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "2",
+        "name": "GAds – Conversão – Lead Formulário",
+        "type": "awct",
+        "parameter": [
+          { "type": "INTEGER",  "key": "conversionId",    "value": "18019842156" },
+          { "type": "TEMPLATE", "key": "conversionLabel", "value": "MGNdCO3Bw6UcEOzww5BD" },
+          { "type": "BOOLEAN",  "key": "remarketing_only","value": "false" },
+          { "type": "TEMPLATE", "key": "conversionValue", "value": "" },
+          { "type": "TEMPLATE", "key": "orderid",         "value": "" },
+          { "type": "TEMPLATE", "key": "customParams",    "value": "" }
+        ],
+        "firingTriggerId": ["2"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "0",
+        "priority": { "type": "INTEGER", "value": "0" }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "3",
+        "name": "GAds – Conversão – Clique WhatsApp",
+        "type": "awct",
+        "parameter": [
+          { "type": "INTEGER",  "key": "conversionId",    "value": "18019842156" },
+          { "type": "TEMPLATE", "key": "conversionLabel", "value": "BqEsCPW2rKUcEOzww5BD" },
+          { "type": "BOOLEAN",  "key": "remarketing_only","value": "false" },
+          { "type": "TEMPLATE", "key": "conversionValue", "value": "" },
+          { "type": "TEMPLATE", "key": "orderid",         "value": "" },
+          { "type": "TEMPLATE", "key": "customParams",    "value": "" }
+        ],
+        "firingTriggerId": ["3"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "0",
+        "priority": { "type": "INTEGER", "value": "0" }
+      }
+    ],
+    "fingerprint": "0"
+  }
+}
